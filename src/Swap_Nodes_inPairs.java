@@ -32,15 +32,15 @@ public class Swap_Nodes_inPairs {
 		int row=0;
 		int col=0;
 		
-		for(int i=0;i<arr1.length;i++)
+		/*for(int i=0;i<arr1.length;i++)
 		{
 			for(int j=i+1;j<arr1.length;j++)
 			{
 			
-				/*
+				
 				temp=arr1[j];
 				arr1[j]=arr1[i];
-				arr1[i]=temp;*/
+				arr1[i]=temp;
 				if(arr1[i]<arr1[j])
 				{
 					if(arr1[j]!=0)
@@ -56,10 +56,24 @@ public class Swap_Nodes_inPairs {
 				}
 
 			}
+			
+			
 
-		}
+		}*/
+		
+		  // Swap adjacent elements
+        for (int i = 0; i < arr1.length - 1; i += 2) {
+            temp = arr1[i];
+            //temp=1,5,7//
+            arr1[i] = arr1[i + 1];
+            //arr[i]=2,6,8//
+            arr1[i + 1] = temp;
+            //arr[i+1]=1,5,7//
+        }
+        // Print the modified array
+
 		System.out.println(Arrays.toString(arr1)+"column");
-
+		//o/p:- 2,1,6,5,8,7//
 		
 	}
 
