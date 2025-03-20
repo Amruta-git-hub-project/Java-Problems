@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class Missing_No {
@@ -29,7 +30,8 @@ public class Missing_No {
 		HashSet<Integer> set1=new HashSet<Integer>();
 		
 		int arr1[]=new int[largest+1];
-		
+		System.out.println("Array value till largest no"+ arr1.length);
+
 		for(int k=0;k<arr1.length;k++)
 		{
 			set.add(k);
