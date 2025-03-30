@@ -20,8 +20,9 @@ public class Swap_Nodes_inPairs {
 		// TODO Auto-generated method stub
 		int arr1[]={1,2,5,6,7,8};
 		
-		Swap_Nodes_Heads(arr1);
-		Swap_HashMap(arr1);
+		//Swap_Nodes_Heads(arr1);
+		//Swap_HashMap(arr1);
+		Swap_nodes(arr1);
 
 	}
 	
@@ -93,11 +94,39 @@ public class Swap_Nodes_inPairs {
 					set1.put(arr1[i], arr1[j]);
 
 				}
-				System.out.println(set1 +"swapped nodes");
+				//System.out.println(set1 +"swapped nodes");
 
 			}
 
 		}
-		//System.out.println(set1 +"swapped nodes");
+		System.out.println(set1 +"swapped nodes");
 	}
+	
+	public static void Swap_nodes(int arr1[])
+	{
+		List<Integer>set= new ArrayList<Integer>();
+		int temp=0;
+		int row=0;
+		int col=0;
+		
+		for(int i=0;i<arr1.length;i++)
+		{
+			for(int j=i+1;j<arr1.length;j++)
+			{
+				temp=arr1[j];
+				arr1[j]=arr1[i];
+				arr1[i]=temp;
+				break;
+
+			}
+			i++;
+			set.add(arr1[i]);
+		}
+		System.out.println(set +"swapped nodes");
+
+		
+	}
+	
+	
+
 }

@@ -15,8 +15,8 @@ public class Combination_of_arrays {
 		int arr1[]={1,2,3,4};
 
 		
-		//Combination(arr1);
-		ListMerge(arr1);
+		Combination(arr1);
+		//ListMerge(arr1);
 
 	}
 	
