@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Longest_SubString_Distinct_Character {
@@ -16,7 +18,8 @@ public class Longest_SubString_Distinct_Character {
 		
 		
 		//System.out.println("Longest substring of distinct character:- " +Distinct_Char(sentence));
-		System.out.println("Longest substring of distinct character:- " +Frequencybased_Char(s1,s2));
+		Frequencybased_Char(s1,s2);
+		//System.out.println("Longest substring of distinct character:- " +Frequencybased_Char(s1,s2));
 	}
 	
 	public static int Distinct_Char(String s)
@@ -41,16 +44,68 @@ public class Longest_SubString_Distinct_Character {
 
 }
     
-	public static int Frequencybased_Char(String x, String s2)
+	public static void Frequencybased_Char(String x, String s2)
 	{
-		int maxlenght=0;
+		/*char maxlength;
+		char req;
+		int reqsize=0;
 		
-		Set<Character>set2= new HashSet<>();
 		for(int i=0;i<x.length();i++)
 		{
-			set2.add(x.charAt(i));
+			//System.out.println("s2"+s2);
+			  maxlength = x.charAt(i);
+			  req=s2.charAt(i);
+			  
+			  while(reqsize<s2.length())
+			  {
+				  if(maxlength==req)
+				  {
+					  System.out.println("eqaul");
+					  System.out.println("maxleng"+ maxlength);		  
+				  }
+				  reqsize++;
+
+			  }
+			break;
+			//set2.add(x.charAt(i));
+			
+			
+			
+		}*/
+		
+		/////////////////////////Chatgpt/////////////////////////////////////////
+		int patternLen = s2.length();
+
+        // Convert pattern to a List
+        List<Character> patternList = new ArrayList<>();
+        for (char ch : s2.toCharArray()) {
+            patternList.add(ch);
+        }
+
+        for (int i = 0; i <= x.length() - patternLen; i++) {
+            String sub = x.substring(i, i + patternLen);
+            List<Character> tempList = new ArrayList<>(patternList); // make a copy
+
+            boolean isAnagram = true;
+            for (char ch : sub.toCharArray()) {
+                if (tempList.contains(ch)) {
+                    tempList.remove((Character) ch); // remove one occurrence
+                } else {
+                    isAnagram = false;
+                    break;
+                }
+            }
+
+            if (isAnagram && tempList.isEmpty()) {
+                System.out.println("Found: " + sub);
+            }
+            
+            //
 		}
-		return 0;
+		
+		
+		
+		
 		
 	}
 
