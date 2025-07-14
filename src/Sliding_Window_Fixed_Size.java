@@ -17,7 +17,7 @@
 public class Sliding_Window_Fixed_Size {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		int arr[] = {2, 4, 5, 1, 3, 2};
         int k = 3;
         System.out.println("Max Sum: " + maxSum(arr, k));  	
